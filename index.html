@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hanna Saroka — CV</title>
+<meta name="description" content="Communication & Graphic Designer based in Milan / Lublin. Brand systems, posters, editorial, and digital experiences with a social and political edge.">
+<meta property="og:title" content="Hanna Saroka — CV">
+<meta property="og:description" content="Communication & Graphic Designer. Milan / Lublin.">
+<meta property="og:type" content="profile">
+<meta property="og:image" content="avatar.jpg">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&family=DM+Serif+Display:ital@0;1&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --coral:      #FF6B6B;
+    --coral-dark: #E85555;
+    --black:      #111111;
+    --off-white:  #F5F2ED;
+    --paper:      #FFFFFF;
+    --gray:       #9A9590;
+    --gray-deep:  #5A554E;
+    --border:     #E8E4DF;
+
+    --serif: 'DM Serif Display', Georgia, serif;
+    --sans:  'Syne', system-ui, sans-serif;
+    --body:  'DM Sans', system-ui, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--body);
+    font-weight: 400;
+    background: var(--off-white);
+    color: var(--black);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::selection { background: var(--coral); color: #fff; }
+
+  a { color: inherit; text-decoration: none; }
+  a:hover { color: var(--coral); }
+
+  .page {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 5rem 3rem;
+  }
+
+  /* ─── HEADER ──────────────────────────────────── */
+  header {
+    display: grid;
+    grid-template-columns: 1fr 140px;
+    gap: 3rem;
+    align-items: end;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .eyebrow {
+    font-family: var(--sans);
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--gray);
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+    margin-bottom: 1.4rem;
+  }
+  .eyebrow::before {
+    content: '';
+    width: 28px;
+    height: 1px;
+    background: var(--coral);
+  }
+
+  h1.name {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(3.2rem, 7vw, 5.6rem);
+    line-height: .95;
+    letter-spacing: -.02em;
+  }
+  h1.name em {
+    font-style: italic;
+    color: var(--coral);
+  }
+
+  .role {
+    font-family: var(--body);
+    font-size: 1.05rem;
+    color: var(--gray-deep);
+    margin-top: 1.1rem;
+    max-width: 36ch;
+  }
+
+  .meta {
+    margin-top: 1.4rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .35rem 1.6rem;
+    font-family: var(--sans);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--gray-deep);
+  }
+  .meta a:hover { color: var(--coral); }
+  .meta .dot { color: var(--coral); }
+
+  .portrait {
+    width: 140px;
+    height: 180px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--paper);
+    filter: grayscale(0);
+  }
+  .portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* ─── SECTIONS ────────────────────────────────── */
+  section {
+    padding: 2.6rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  section:last-of-type { border-bottom: none; }
+
+  h2.section-title {
+    font-family: var(--sans);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--gray);
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+    margin-bottom: 1.8rem;
+  }
+  h2.section-title::before {
+    content: '';
+    width: 28px;
+    height: 1px;
+    background: var(--coral);
+  }
+
+  /* ─── SUMMARY ─────────────────────────────────── */
+  .summary p {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(1.2rem, 1.9vw, 1.55rem);
+    line-height: 1.5;
+    color: var(--black);
+    letter-spacing: -.005em;
+    max-width: 60ch;
+  }
+  .summary p em { color: var(--coral); font-style: italic; }
+
+  /* ─── ENTRIES (experience / education) ────────── */
+  .entry {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 1.5rem;
+    padding: 1.2rem 0;
+    border-top: 1px solid var(--border);
+  }
+  .entry:first-of-type { border-top: none; padding-top: 0; }
+
+  .entry-period {
+    font-family: var(--sans);
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--coral);
+    padding-top: .4rem;
+  }
+
+  .entry-title {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    line-height: 1.15;
+    margin-bottom: .15rem;
+  }
+  .entry-org {
+    font-family: var(--sans);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--gray-deep);
+    margin-bottom: .6rem;
+  }
+  .entry-org a:hover { color: var(--coral); }
+
+  .entry-body { font-size: .95rem; color: var(--gray-deep); line-height: 1.7; }
+
+  .entry-bullets {
+    list-style: none;
+    margin-top: .65rem;
+    padding: 0;
+  }
+  .entry-bullets li {
+    font-size: .92rem;
+    color: var(--gray-deep);
+    padding-left: 1.2rem;
+    position: relative;
+    margin-bottom: .35rem;
+    line-height: 1.6;
+  }
+  .entry-bullets li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: .65em;
+    width: 12px;
+    height: 1px;
+    background: var(--coral);
+  }
+
+  .entry-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .35rem;
+    margin-top: .8rem;
+  }
+  .badge {
+    font-family: var(--sans);
+    font-size: .62rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    padding: .3rem .65rem;
+    background: var(--paper);
+    border: 1px solid var(--border);
+    color: var(--gray-deep);
+  }
+
+  /* ─── PROJECTS ────────────────────────────────── */
+  .projects-list { display: flex; flex-direction: column; }
+  .project {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1.5rem;
+    align-items: baseline;
+    padding: 1.1rem 0;
+    border-top: 1px solid var(--border);
+  }
+  .project:first-of-type { border-top: none; padding-top: .3rem; }
+
+  .project-title {
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    line-height: 1.2;
+  }
+  .project-title em { color: var(--coral); font-style: italic; }
+  .project-desc {
+    font-size: .92rem;
+    color: var(--gray-deep);
+    margin-top: .15rem;
+    line-height: 1.55;
+  }
+  .project-tech {
+    font-family: var(--sans);
+    font-size: .65rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--gray);
+    white-space: nowrap;
+  }
+
+  /* ─── SKILLS / LANGUAGES (pills) ──────────────── */
+  .pills { display: flex; flex-wrap: wrap; gap: .4rem; }
+  .pill {
+    font-family: var(--sans);
+    font-size: .78rem;
+    font-weight: 700;
+    letter-spacing: .02em;
+    padding: .45rem .85rem;
+    background: var(--paper);
+    border: 1px solid var(--border);
+    transition: background .2s, color .2s, border-color .2s;
+  }
+  .pill:hover { background: var(--coral); border-color: var(--coral); color: #fff; }
+  .pill.solid { background: var(--black); color: #fff; border-color: var(--black); }
+  .pill.solid:hover { background: var(--coral); border-color: var(--coral); }
+
+  /* ─── CONTACT FOOTER ──────────────────────────── */
+  .footer {
+    margin-top: 3.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1.5rem;
+    font-family: var(--sans);
+    font-size: .72rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--gray-deep);
+  }
+  .footer .signoff em { color: var(--coral); font-style: italic; font-family: var(--serif); text-transform: none; font-weight: 400; letter-spacing: 0; font-size: 1.1rem; }
+  .footer a:hover { color: var(--coral); }
+  .footer-links { display: flex; flex-wrap: wrap; gap: 1.3rem; }
+
+  /* ─── RESPONSIVE ──────────────────────────────── */
+  @media (max-width: 720px) {
+    .page { padding: 3rem 1.4rem; }
+    header { grid-template-columns: 1fr; gap: 1.6rem; }
+    .portrait { width: 110px; height: 140px; order: -1; }
+    .entry { grid-template-columns: 1fr; gap: .35rem; }
+    .entry-period { padding-top: 0; margin-bottom: .25rem; }
+    .project { grid-template-columns: 1fr; }
+    .project-tech { margin-top: .35rem; }
+  }
+
+  /* ─── PRINT ───────────────────────────────────── */
+  @media print {
+    body { background: #fff; }
+    .page { max-width: 100%; padding: 1.2cm 1.5cm; }
+    section { padding: 1.1rem 0; }
+    h2.section-title { margin-bottom: 1rem; }
+    .pill:hover, .badge:hover { background: var(--paper); color: var(--gray-deep); }
+    .footer-links a:not([data-print]) { display: none; }
+    .no-print { display: none !important; }
+    a { color: var(--black) !important; }
+    a::after { content: ''; }
+  }
+</style>
+</head>
+<body>
+<main class="page">
+
+  <!-- ─── HEADER ─── -->
+  <header>
+    <div>
+      <div class="eyebrow">Curriculum Vitae · 2026</div>
+      <h1 class="name">Hanna <em>Saroka</em></h1>
+      <p class="role">Communication &amp; Graphic Designer working at the intersection of social themes and visual craft.</p>
+      <div class="meta">
+        <span>Milan, Italy <span class="dot">·</span> Lublin, Poland</span>
+        <a href="mailto:hannasaroka204@gmail.com">hannasaroka204@gmail.com</a>
+        <a href="https://hannasaroka.name" target="_blank" rel="noopener">hannasaroka.name</a>
+      </div>
+    </div>
+    <div class="portrait">
+      <img src="avatar.jpg" alt="Hanna Saroka portrait">
+    </div>
+  </header>
+
+  <!-- ─── SUMMARY ─── -->
+  <section class="summary">
+    <h2 class="section-title">About</h2>
+    <p>
+      Belarusian-born designer based between Milan and Lublin. I build visual systems, brand identities, posters, and digital experiences — most often engaging with <em>social and political themes</em>. Selected for the International Poster Biennale, Lublin (2025); BA from the Academy of Fine Arts in Łódź, graduated with highest distinction.
+    </p>
+  </section>
+
+  <!-- ─── EXPERIENCE ─── -->
+  <section>
+    <h2 class="section-title">Experience</h2>
+
+    <article class="entry">
+      <div class="entry-period">2021 — Present</div>
+      <div>
+        <h3 class="entry-title">Graphic &amp; Communication Designer</h3>
+        <div class="entry-org">Freelance · Remote</div>
+        <p class="entry-body">
+          End-to-end design for international clients — brand identities, poster campaigns, editorial layouts, and web design. Self-initiated social and political poster series selected for national and international exhibitions.
+        </p>
+        <ul class="entry-bullets">
+          <li>Designed and shipped <strong>EcoZaryad</strong> — a multi-page website (HTML/CSS) for an EV-charging installation business covering services, coverage map, FAQ, and lead capture.</li>
+          <li>Built <strong>Same Feeling, Different Object: Inheritance</strong> — an interactive web experience exploring emotional inheritance across five archetypes.</li>
+          <li>Selected for International Poster Biennale, Lublin (2025); Audience Choice Award for silkscreen prints (2024–2025).</li>
+        </ul>
+        <div class="entry-badges">
+          <span class="badge">Branding</span>
+          <span class="badge">Editorial</span>
+          <span class="badge">Poster</span>
+          <span class="badge">Web</span>
+          <span class="badge">Remote</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="entry">
+      <div class="entry-period">2025 — Present</div>
+      <div>
+        <h3 class="entry-title">Creator &amp; Producer</h3>
+        <div class="entry-org">EdenGate · Independent</div>
+        <p class="entry-body">
+          Concept, story design, visual direction, and AI-generated cinematic trailer for an independent narrative game project.
+        </p>
+        <div class="entry-badges">
+          <span class="badge">Narrative</span>
+          <span class="badge">AI Video</span>
+          <span class="badge">Direction</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="entry">
+      <div class="entry-period">2021 — 2024</div>
+      <div>
+        <h3 class="entry-title">Design Intern</h3>
+        <div class="entry-org">Museum of Contemporary Art, Łódź</div>
+        <p class="entry-body">
+          Editorial and exhibition graphics; supported curatorial communication across museum programmes.
+        </p>
+        <div class="entry-badges">
+          <span class="badge">Editorial</span>
+          <span class="badge">Exhibition</span>
+          <span class="badge">On Site</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="entry">
+      <div class="entry-period">2021 — 2024</div>
+      <div>
+        <h3 class="entry-title">Creative Workshop Facilitator</h3>
+        <div class="entry-org">Cultural Institutions · Łódź</div>
+        <p class="entry-body">
+          Designed and led creative workshops for cultural and educational programmes.
+        </p>
+        <div class="entry-badges">
+          <span class="badge">Education</span>
+          <span class="badge">Workshop</span>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- ─── EDUCATION ─── -->
+  <section>
+    <h2 class="section-title">Education</h2>
+
+    <article class="entry">
+      <div class="entry-period">2025 — Present</div>
+      <div>
+        <h3 class="entry-title">MA, Communication Design</h3>
+        <div class="entry-org">Politecnico di Milano</div>
+      </div>
+    </article>
+
+    <article class="entry">
+      <div class="entry-period">2024 — Present</div>
+      <div>
+        <h3 class="entry-title">MA, Graphic Design</h3>
+        <div class="entry-org">Maria Curie-Skłodowska University · Lublin</div>
+      </div>
+    </article>
+
+    <article class="entry">
+      <div class="entry-period">2021 — 2024</div>
+      <div>
+        <h3 class="entry-title">BA, Visual Projects</h3>
+        <div class="entry-org">Academy of Fine Arts · Łódź</div>
+        <p class="entry-body">Graduated with <strong>highest distinction</strong>.</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- ─── PROJECTS ─── -->
+  <section>
+    <h2 class="section-title">Selected Projects</h2>
+    <div class="projects-list">
+
+      <a class="project" href="https://hannasaroka.name" target="_blank" rel="noopener">
+        <div>
+          <div class="project-title">EcoZaryad</div>
+          <div class="project-desc">Multi-page website for an EV charging-station installation business in the Brest region — brand, copy, IA, front-end.</div>
+        </div>
+        <div class="project-tech">HTML · CSS · Brand · 2026</div>
+      </a>
+
+      <a class="project" href="https://hannasaroka.name" target="_blank" rel="noopener">
+        <div>
+          <div class="project-title">Inheritance <em>—</em> Same Feeling, Different Object</div>
+          <div class="project-desc">Interactive web experience exploring emotional inheritance across five archetypes: quit, unfinished, connection, sanctuary, identity.</div>
+        </div>
+        <div class="project-tech">Web · Interaction · 2026</div>
+      </a>
+
+      <a class="project" href="https://hannasaroka.name" target="_blank" rel="noopener">
+        <div>
+          <div class="project-title">EdenGate</div>
+          <div class="project-desc">Independent narrative game — concept, story, visual direction, and AI-generated cinematic trailer.</div>
+        </div>
+        <div class="project-tech">Narrative · AI Video · 2025</div>
+      </a>
+
+      <a class="project" href="https://hannasaroka.name" target="_blank" rel="noopener">
+        <div>
+          <div class="project-title">Zentrix <em>—</em> QR Civic Design System</div>
+          <div class="project-desc">Civic design system using QR codes for public-space interaction.</div>
+        </div>
+        <div class="project-tech">Social Design · 2026</div>
+      </a>
+
+      <a class="project" href="https://hannasaroka.name" target="_blank" rel="noopener">
+        <div>
+          <div class="project-title">Ecofeminism Posters &amp; Video</div>
+          <div class="project-desc">Educational poster series and companion video on ecofeminism.</div>
+        </div>
+        <div class="project-tech">Poster · Motion · 2026</div>
+      </a>
+
+      <a class="project" href="https://hannasaroka.name" target="_blank" rel="noopener">
+        <div>
+          <div class="project-title">Wayfinding <em>—</em> Cultural Meeting Center</div>
+          <div class="project-desc">Full wayfinding and signage system for a cultural meeting center.</div>
+        </div>
+        <div class="project-tech">Wayfinding · 2025</div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ─── SKILLS ─── -->
+  <section>
+    <h2 class="section-title">Tools &amp; Skills</h2>
+    <div class="pills">
+      <span class="pill">Figma</span>
+      <span class="pill">Photoshop</span>
+      <span class="pill">Illustrator</span>
+      <span class="pill">InDesign</span>
+      <span class="pill">After Effects</span>
+      <span class="pill">Affinity Suite</span>
+      <span class="pill">Procreate</span>
+      <span class="pill">Canva</span>
+      <span class="pill">ComfyUI</span>
+      <span class="pill">Runway</span>
+      <span class="pill">HTML / CSS</span>
+    </div>
+    <div class="pills" style="margin-top:.6rem">
+      <span class="pill solid">Branding</span>
+      <span class="pill solid">Editorial</span>
+      <span class="pill solid">Poster Design</span>
+      <span class="pill solid">Wayfinding</span>
+      <span class="pill solid">UX / UI</span>
+      <span class="pill solid">Screen Printing</span>
+      <span class="pill solid">Exhibition Design</span>
+      <span class="pill solid">Book Illustration</span>
+    </div>
+  </section>
+
+  <!-- ─── LANGUAGES ─── -->
+  <section>
+    <h2 class="section-title">Languages</h2>
+    <div class="pills">
+      <span class="pill solid">Russian · Native</span>
+      <span class="pill solid">Belarusian · Native</span>
+      <span class="pill">Polish · C1</span>
+      <span class="pill">English · C1</span>
+      <span class="pill">Italian · A2</span>
+    </div>
+  </section>
+
+  <!-- ─── AWARDS ─── -->
+  <section>
+    <h2 class="section-title">Recognition</h2>
+    <ul class="entry-bullets" style="margin:0">
+      <li>International Poster Biennale, Lublin — selected work (2025).</li>
+      <li>Audience Choice Award — silkscreen prints (2024–2025).</li>
+      <li>National Poster Competition — Warsaw gallery exhibition (2022–2024).</li>
+      <li>BA Visual Projects — highest distinction, Academy of Fine Arts, Łódź (2024).</li>
+    </ul>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <div class="signoff">Designing for <em>meaning</em>, not just beauty.</div>
+    <div class="footer-links">
+      <a href="mailto:hannasaroka204@gmail.com" data-print>Email</a>
+      <a href="https://hannasaroka.name" target="_blank" rel="noopener" data-print>Portfolio</a>
+      <a href="https://github.com/hannasaroka204-lang" target="_blank" rel="noopener" class="no-print">GitHub</a>
+      <a href="javascript:window.print()" class="no-print">Print / PDF</a>
+    </div>
+  </footer>
+
+</main>
+</body>
+</html>
